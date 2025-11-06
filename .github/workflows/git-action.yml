@@ -87,7 +87,7 @@ jobs:
         env:
           IMAGE_REPO: ${{ secrets.DOCKERHUB_USERNAME }}/notification
           FILE: app/notification/k8s/notification-deployment.yaml
-          CONTAINER: notification-service
+          CONTAINER: notification
         run: |
           test -f "$FILE" || { echo "Not found: $FILE"; exit 1; }
           yq -i '
