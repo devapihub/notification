@@ -14,6 +14,8 @@ public class MainController {
 
     @GetMapping("")
     public Object hello() {
-        return Map.of("status", "OK", "message", "Hello notification service");
+        return Map.of("status", 200,
+                "message", "Notification Service is running"
+        );
     }
 }
