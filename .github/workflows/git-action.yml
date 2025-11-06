@@ -85,7 +85,7 @@ jobs:
 
       - name: Update image tag
         env:
-          IMAGE_REPO: ${{ secrets.DOCKERHUB_USERNAME }}/notification
+          IMAGE_REPO: ${{ secrets.DOCKERHUB_USERNAME }}/notification-service
           FILE: app/notification/k8s/notification-deployment.yaml
           CONTAINER: notification
         run: |
