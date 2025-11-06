@@ -86,7 +86,7 @@ jobs:
       - name: Update image tag
         env:
           IMAGE_REPO: ${{ secrets.DOCKERHUB_USERNAME }}/notification-service
-          FILE: app/notification-service/k8s/notification-deployment.yaml
+          FILE: app/notification/k8s/notification-deployment.yaml
           CONTAINER: notification-service
         run: |
           test -f "$FILE" || { echo "Not found: $FILE"; exit 1; }
